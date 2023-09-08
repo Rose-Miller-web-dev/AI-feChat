@@ -1,0 +1,63 @@
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11122366664"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-11122366664');
+  </script>
+</head>
+
+<!--<div class="container">-->
+<!--  <navbar-cmp></navbar-cmp>-->
+<!--</div>-->
+
+<div class="main-container">
+
+  <div class="container d-flex align-items-center justify-content-center">
+    <div class="row mt-3">
+      <p class="fw-bold"> Please enter a text to synthesize: </p>
+<!--      <textarea class="form-control mb-3" id="sentence" rows="2" cols="1" required [(ngModel)]="sentence"></textarea>-->
+      <label class="form-label">Select Gender</label>
+<!--      <select class="form-control" [(ngModel)]="gender" (change)="resetLanguageModel()">-->
+<!--        <option value="male">Male</option>-->
+<!--        <option value="female">Female</option>-->
+<!--        <option value="all">All</option>-->
+<!--      </select>-->
+
+      <label class="form-label mt-3">Select Language</label>
+<!--      <select class="form-control" [(ngModel)]="selectedLanguageModel">-->
+<!--        <option *ngFor="let option of languageOptionsByGender[gender]" [value]="option.value">{{option.displayName}}</option>-->
+<!--      </select>-->
+    </div>
+
+  </div>
+
+<div class="s11 text-center mb-3">
+
+  <button class="btn btn-primary"
+          [disabled]='selectedLanguageModel == null || this.magic || this.sentence=="" ' (click)="gen()"> Synthesize Speech
+  </button>
+</div>
+<div *ngIf="this.magic==true" class="text-center d-flex justify-content-center align-items-center mt-2">
+  <div class="spinner-border text-primary" role="status"></div>
+  <span class="visually-hidden ml-2">Loading...</span>
+</div>
+
+<div class="audio-player">
+  <div class="controls">
+    <button (click)="togglePlay()">
+      <i class="fa fa-play" *ngIf="!isPlaying"></i>
+      <i class="fa fa-pause" *ngIf="isPlaying"></i>
+      <i class="fa fa-stop" *ngIf="!isPlaying"></i>
+    </button>
+  </div>
+  <div class="progress" (click)="seek($event)">
+    <div class="progress-bar" [style.width]="progress + '%'"></div>
+  </div>
+  <div class="time">{{time}}</div>
+</div>
+</div>
+

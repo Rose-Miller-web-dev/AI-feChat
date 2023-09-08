@@ -1,0 +1,87 @@
+/* Add some basic styling to the text area and button */
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.fancy-text {
+  font-size: 36px;
+  /* Set the font size to 36 pixels */
+  color: #a5bdf1;
+  font-weight: bold;
+  /* Set the text color to a nice shade of yellow */
+}
+
+
+
+/* Center the text area and button in the container */
+.s1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the audio player */
+.audio-player {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Style the play/pause button */
+.audio-player button {
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+}
+
+/* Style the progress bar */
+.progress {
+  width: 80%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #4CAF50;
+}
+
+/* Style the time display */
+.time {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Style the container for the checkbox group */
+.language-model-select {
+  /* Use the Lobster font for the text */
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Style each checkbox and its label */
+.language-model-select input[type="checkbox"] {
+  display: none;
+  /* hide the actual checkbox */
+}
+
+.btn-primary {
+  background-color: #f5f6fa;
+  color: #00a8ff;
+}
+
+.btn-primary:hover {
+  background-color: #00a8ff !important;
+  color: #f5f6fa !important;
+}
+.main-container {
+  /*flex-grow: 1;*/
+  padding-top: 100px; /* Adjust the padding value to create space below the navbar */
+}

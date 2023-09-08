@@ -1,0 +1,32 @@
+<div class="fixed-audio-selector">
+  <a data-toggle="modal" data-target="#audioModal">
+    <i class="fa  fa-1x" aria-hidden="true"> Sample Audios </i>
+  </a>
+</div>
+
+<div  class="modal right" tabindex="-1" id="audioModal">
+  <div class="modal-dialog">
+    <div style="background: linear-gradient(to bottom, #97b5f5 0%, #e8eaee 100%) " class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Select Audio/Video file</h5>
+        <button #closeModal type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pl-4">
+        <div *ngFor="let audio of defaultAudios">
+          <p>{{audio.description}}</p>
+          <audio controls class="embed-responsive" src="{{audio.path}}"></audio><br/>
+          <button type="button" class="btn btn-secondary" (click)="selectAudio(audio.path)">Select {{audio.name}}</button>
+          <hr/>
+        </div>
+        <div *ngFor="let video of defaultVideos">
+          <p>{{video.description}}</p>
+          <video controls class="embed-responsive" src="{{video.path}}"></video><br/>
+          <button type="button" class="btn btn-secondary" (click)="selectVideo(video.path)">Select {{video.name}}</button>
+          <hr/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<!--<navbar-cmp></navbar-cmp>-->
+
+<div *ngIf="!token">
+<div *ngIf="!registered">
+  <div></div>
+
+  <div class="card bg-dark col-4 mx-auto">
+
+    <div class="card-body col-9 mx-auto">
+      <div class="mb-md-5 mt-md-4 pb-5">
+      <h2 class="text-gray fw-bold mb-2 text-uppercase">sign up</h2>
+
+      <form #addUserForm="ngForm" (ngSubmit)="Register(addUserForm)" required>
+    <div class="flex flex-wrap gap-3 mb-3 col-12">
+      <div class="flex flex-wrap gap-3 mb-3  mx-auto">
+        <div class="input-group flex-nowrap mt-5">
+<!--          <span class="input-group-text " id="addon-wrapping">@</span>-->
+          <input input ngModel name="email"  required class="form-control form-control-lg" placeholder="Email" aria-label="Email" aria-describedby="addon-wrapping">
+        </div>
+
+
+      <div class="input-group flex-nowrap mt-2">
+<!--        <span class="input-group-text" id="addon-wrapping">Password</span>-->
+        <input type="password" ngModel name="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="addon-wrapping">
+      </div>
+
+    <div class="input-group flex-nowrap mt-2">
+<!--      <span class="input-group-text" id="addon-wrapping">Confirm Password</span>-->
+      <input input type="password" ngModel name="matchingPassword" class="form-control form-control-lg" placeholder="Confirm Password" aria-label="Confirm Password" aria-describedby="addon-wrapping">
+    </div>
+
+    <div class="input-group flex-nowrap mt-2">
+<!--      <span class="input-group-text" id="addon-wrapping">First Name</span>-->
+      <input type="text" ngModel name="firstName" class="form-control form-control-lg" placeholder="First Name" aria-label="First Name" aria-describedby="addon-wrapping">
+    </div>
+
+    <div class="input-group flex-nowrap mt-2">
+<!--      <span class="input-group-text" id="addon-wrapping">Last Name</span>-->
+      <input  type="text" ngModel name="lastName" class="form-control form-control-lg" placeholder="Last Name" aria-label="Last Name" aria-describedby="addon-wrapping">
+    </div>
+    <div *ngIf="loading" class="d-grid gap-2 d-md-flex justify-content-md-end mt-5">
+      <div class="spinner-border text-success" role="status">
+        <span class="visually-hidden"></span>
+      </div>
+    </div>
+    <div *ngIf="!loading" class="d-grid gap-2 d-md-flex justify-content-md-end mt-5">
+      <button class="btn btn-outline-light btn-lg px-5" type="button" type="submit" [disabled]="addUserForm.invalid" >Register</button>
+    </div>
+  </div>
+  </div>
+
+  </form>
+</div>
+</div>
+</div>
+<div>
+</div>
+
+</div>
+<div *ngIf="registered" class="flex col-6 mx-auto mt-5">
+  <div class="alert alert-success" role="alert">
+    You registered successfully. We will send you a confirmation message to your email account.
+  </div>
+  <button (click)="home()">Back to home page</button>
+</div>
+
+</div>
+<div *ngIf="token">
+  <div class="alert alert-info" role="alert">
+    Verifying Email
+  </div>
+</div>
+
+

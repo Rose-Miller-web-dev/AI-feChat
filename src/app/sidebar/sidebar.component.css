@@ -1,0 +1,16 @@
+.logo:hover{
+    cursor: pointer;
+}
+
+.logo-image-small{
+    cursor: pointer;
+}
+
+.i{
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+.p{
+  color: #ffffff !important;
+}

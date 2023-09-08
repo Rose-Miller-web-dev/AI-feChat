@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+    <div class="chat-container" *ngFor="let message of chatHistory">
+
+      <li *ngIf="message.role === 'user'" class="user-message">
+        {{ message.content }}
+      </li>
+  
+      <li *ngIf="message.role === 'assistant'" class="assistant-message">
+        {{ message.content }}
+      </li> 
+  
+    </div>
+
+    <div class="invisible-area"></div>
+
+  <div class="bottom-tab">
+    
+      <select class="lang-select" name="Language" [(ngModel)]="selectedLang">
+        <option value="English">English</option>
+        <option value="Turkish" selected="selected" selected>Turkish</option>
+        <option value="German">German</option>
+        <option value="French">French</option>
+      </select>
+    
+      <button class="push-btn" (mouseup)="uptalk()" (mousedown)="movetalk()" (mouseover)="overtalk()" (click)="clicktalk()" >Push to Talk</button>
+  </div>
+  
+  <div class="cover"></div>
+
+</body>
+</html>

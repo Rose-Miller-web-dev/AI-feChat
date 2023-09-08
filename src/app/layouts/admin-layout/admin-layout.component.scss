@@ -1,0 +1,35 @@
+body{
+  background: #1D2026 !important;
+}
+/* use CSS to style the sidebar content */
+.sidebar-content {
+  background-color: lightblue;
+  padding: 20px;
+}
+
+/* use CSS to style the sidebar title */
+.sidebar-title {
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+}
+
+/* use CSS to style the sidebar text */
+.sidebar-text {
+  font-size: 18px;
+  color: black;
+}
+
+/* use CSS to style the sidebar button */
+.sidebar-button {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+*{
+  color: #ffffff !important;
+}
+p{
+  color: #ffffff !important;
+}

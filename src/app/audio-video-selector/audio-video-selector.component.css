@@ -1,0 +1,50 @@
+.fixed-audio-selector {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  padding: 15px 15px;
+  width: 70px;
+
+  /*transform: translate(0%, -50%);*/
+  background-color: rgb(60, 101, 148);
+  color: #8bcee7;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+}
+
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 500px;
+  height: 100%;
+  right: -350px;
+}
+
+.modal.right .modal-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.modal.right .modal-body {
+  padding: 15px 15px 80px;
+}
+
+.modal.right.show .modal-dialog {
+  right: 0;
+  -webkit-transition: opacity 0.3s linear, right 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s linear, right 0.3s ease-in-out;
+  -o-transition: opacity 0.3s linear, right 0.3s ease-in-out;
+  transition: opacity 0.3s linear, right 0.3s ease-in-out;
+}
+
+hr {
+  border: none;
+  height: 3px;
+  background-color: black;
+}
+
+p {
+  /*border: none;*/
+  font-weight: bold;
+  /*background-color: black;*/
+}

@@ -1,0 +1,27 @@
+<!--<navbar-cmp></navbar-cmp>-->
+
+<div class="wrapper" style="background:  rgb(28,41,60) !important;">
+  <!--  <div class="ml-auto ml-3">-->
+  <!--    &lt;!&ndash;  <span *ngIf="loggedInUsername" class="username-span"> User Name: {{ loggedInUsername }}</span>&ndash;&gt;-->
+
+  <!--    &lt;!&ndash;  <button  routerLink="/" (click)="logout()">  Logout</button>  &ndash;&gt;-->
+  <!--    <button routerLink="/login">Login</button>-->
+  <!--    <button routerLink="/signup">Sign up</button>-->
+  <!--    &lt;!&ndash;  <button *ngIf=isLogged routerLink="/login">Logout</button> | <button routerLink="/signup">Sign up</button>&ndash;&gt;-->
+
+  <!--  </div>-->
+  <div class="sidebar" data-color="white" data-active-color="danger">
+    <sidebar-cmp></sidebar-cmp>
+  </div>
+  <div class="main-panel" style="background: rgb(28,41,60) !important;">
+
+
+    <!--        <navbar-cmp></navbar-cmp>-->
+    <div class="content" style="background: rgb(28,41,60) !important; padding-top: 0px !important; margin-top: 0px !important;">
+      <router-outlet></router-outlet>
+    </div>
+    <!--        <footer-cmp></footer-cmp>-->
+<!--    <audio-video-selector></audio-video-selector>-->
+  </div>
+</div>
+<!--<fixedplugin-cmp></fixedplugin-cmp>-->

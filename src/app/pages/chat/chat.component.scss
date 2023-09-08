@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(28,41,60);
+}
+
+body {
+    overflow-x: hidden;
+    padding-top: 2rem;
+}
+
+.chat-container {
+    width: 100%;
+    background-color: rgb(28,41,60);
+    padding-right: 5%;
+    padding-left: 10%;
+    align-items: center;
+    align-items: center;
+    justify-content: space-between;
+    display: block;
+    margin-bottom: 1rem;
+    
+}
+
+ul {
+    list-style: none;
+    display: block;
+    width: 50%;
+}
+
+.user-message , .assistant-message {
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.user-message {
+    width: fit-content;
+    background-color: rgb(169, 209, 245);
+    position: relative;
+    left: 35vw;
+    align-self: end;
+}
+
+.assistant-message {
+    width: fit-content;
+    background-color: aliceblue;
+}
+
+li {
+    max-width: 40%;
+}
+
+.invisible-area {
+    position: relative;
+    height: 16vh;
+    visibility: hidden;
+}
+
+.bottom-tab {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+    border-radius: 2rem;
+    padding: .6rem;
+    position: fixed;
+    bottom: 8vh;
+    width: 72vw;
+    margin:auto;
+    margin-left: 3vw;
+}
+
+.push-btn {
+    border: none;
+    padding: .9rem;
+    border-radius: 1.8rem;
+    background-color: rgb(28,41,60);
+    color: aliceblue;
+    font-size: 12px;
+}
+
+.push-btn:hover {
+    background-color: rgb(17, 25, 36);
+}
+
+.lang-select {
+    padding: .9rem;
+    border-radius: 1.8rem;
+    background-color: aliceblue;
+}
+
+option {
+    background-color: aliceblue;
+    padding: .9rem;
+}
+
+.cover {
+    position: fixed;
+    bottom: 0;
+    width: 85vw;
+    height: 8vh;
+    background-color: rgb(28,41,60);
+}
+
+@media screen and (max-width: 1285px) {
+   
+    .bottom-tab {
+        width: 66vw;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .bottom-tab {
+       width: 85vw;
+       margin-left: 2vw;
+    }
+
+}
+
+@media screen and (max-width: 790px) {
+
+    .chat-container {
+        padding-left: 5%;
+    }
+
+    ul {
+        width: 85vw;
+    }
+
+    li {
+        max-width: 100%;
+    }
+
+    .user-message {
+        position: relative;
+        left: 0vw;
+    }
+
+    .cover {
+        width: 100vw;
+    }
+}

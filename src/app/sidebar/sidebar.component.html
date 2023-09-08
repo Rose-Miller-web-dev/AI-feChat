@@ -1,0 +1,34 @@
+
+<div class="sidebar-wrapper custom-sidebar" style="background: #1D2026 !important;">
+  <div class="logo">
+    <div class="logo-image-small">
+      <img src="assets/img/logo-black-2.png" style="cursor: pointer;" [routerLink]="['/home']">
+    </div>
+  </div>
+  <ul class="nav">
+    <li routerLinkActive="active" *ngFor="let menuitem of menuItems">
+      <!--If is a single link-->
+      <a [routerLink]="[menuitem.path]" *ngIf="menuitem.type === 'link'">
+        <i style="color: #ffffff !important; opacity: 1;" class="{{menuitem.icontype}}"></i>
+        <p style="color: #ffffff !important; opacity: 1;">{{menuitem.title}}</p>
+      </a>
+      <!--If it have a submenu-->
+      <a data-toggle="collapse" href="#{{menuitem.collapse}}" *ngIf="menuitem.type === 'sub'">
+        <i style="color: #ffffff !important; opacity: 1;" class="{{menuitem.icontype}}"></i>
+        <p style="color: #ffffff !important; opacity: 1;">{{menuitem.title}}<b class="caret"></b></p>
+      </a>
+
+      <!--Display the submenu items-->
+      <div id="{{menuitem.collapse}}" class="collapse" *ngIf="menuitem.type === 'sub'">
+        <ul class="nav">
+          <li routerLinkActive="active" *ngFor="let childitem of menuitem.children">
+            <a [routerLink]="[menuitem.path, childitem.path]">
+              <span style="color: #ffffff !important; opacity: 1;" class="sidebar-mini-icon">{{childitem.ab}}</span>
+              <span style="color: #ffffff !important; opacity: 1;" class="sidebar-normal">{{childitem.title}}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</div>

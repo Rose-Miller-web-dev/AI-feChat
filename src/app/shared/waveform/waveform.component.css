@@ -1,0 +1,84 @@
+.class {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    margin: 20px 0;
+    background-color: none;
+}
+
+.time-marker {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: red;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.bi {
+  fill: black;
+}
+
+.font-weight-light {
+  color: black;
+}
+
+#waveform {
+  background-color: #ffffff;
+  height: 200pxpx;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  background: rgba(149, 133, 159, 0.1);
+  border-bottom: 1px #ffffff solid;
+}
+
+#wave-timeline {
+  background: rgb(62, 119, 203);
+  height: 30px;
+  border-radius: 5px;
+  color: #00FF00 !important;
+}
+
+.mt-5.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-weight-light.text-center {
+  font-size: 0.8rem;
+}
+
+svg {
+  border-radius: 50%;
+}
+
+svg {
+  width: 50px;
+  height: 42px;
+}
+
+svg {
+  margin: 10px;
+}
+
+svg {
+  fill: white;
+}
+
+svg {
+  background: none;
+}
+
+svg:hover {
+  transform: scale(1.1);
+}
+
+.bi-skip-forward-fill:active {
+  transform: rotate(360deg);
+}
+
